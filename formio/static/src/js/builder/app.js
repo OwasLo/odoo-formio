@@ -51,10 +51,10 @@ class App extends Component {
             if (! res.hasOwnProperty('components')) {
                 return;
             }
-            else if ('readOnly' in self.params && self.params['readOnly'] == true) {
-                alert("This Form Builder is readonly (probably locked). Refresh the page and try again.");
-                return;
-            }
+            // else if ('readOnly' in self.params && self.params['readOnly'] == true) {
+            //     alert("This Form Builder is readonly (probably locked). Refresh the page and try again.");
+            //     return;
+            // }
             else {
                 console.log('[Forms] Saving Builder...');
                 $.jsonRpc.request(self.saveUrl, 'call', {
